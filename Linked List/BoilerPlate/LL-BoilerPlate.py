@@ -3,17 +3,17 @@
 ## ** Node Class:
 #----------------
 # data : refers to the data that each node in th LL will hold. 
-# next_node : behaves like a pointer to the child node. 
+# next : behaves like a pointer to the child node. 
 class Node(object):
 
     ## ** Initialize a node
     #----------------------
     # We initialize each node with some "data"
-    # next_node is set to None as the node is created as a floating node
+    # next is set to None as the node is created as a floating node
     # a newly minted node does not point to anything. 
     def __init__(self, data):
         self.data = data
-        self.next_node = None
+        self.next = None
 
 ## ** LinkedList Class:
 #----------------------
@@ -53,9 +53,9 @@ class LinkedList(object):
     # Return - To print all the nodes in the linked list
     def traverse(self):
     	node = self.head
-    	while (node.next_node!=None):
+    	while (node.next!=None):
     		print node.data
-    		node = node.next_node
+    		node = node.next
     	print node.data
 
     ## ** Find/Search:
