@@ -65,7 +65,14 @@ class LinkedList(object):
     def find(self, val):
     	pass
         
-
+    ## ** Length/Node Count :
+    #-----------------------
+    # To count the number of nodes contained in the list 
+    # returns an integer value. 
+    # returns 0 if no nodes are present. 
+    def listLength(self):
+    	pass
+    
 # Create instance of LL
 L = LinkedList()
 
