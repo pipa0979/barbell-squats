@@ -73,6 +73,12 @@ class LinkedList(object):
     def listLength(self):
     	pass
     
+    ## ** Status:
+    #-----------------
+    # Prints the current position of head, tail pointers. 
+    def status(self):
+    	pass
+    
 # Create instance of LL
 L = LinkedList()
 
