@@ -30,7 +30,7 @@ class LinkedList(object):
         else: # LL not empty
             new_node = Node(val)
             self.status()
-            new_node.next = self.head
+            new_node.next = self.head # imp step. Ask why
             self.head = new_node
             return True
         return False
