@@ -79,6 +79,15 @@ class LinkedList(object):
     def status(self):
     	pass
     
+    ## ** isEmpty:
+    #---------------
+    # Returns True if the Linked List is empty
+    def isEmpty(self):
+        if self.head == None:
+            return True
+        else:
+            return False
+        
 # Create instance of LL
 L = LinkedList()
 
