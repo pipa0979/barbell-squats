@@ -29,23 +29,20 @@ class LinkedList(object):
     def __init__(self):
         self.head = None
         self.tail = None
-        
-    ## ** Add:
-    #--------
-    # To add a value to a Linked List
-    # val - variable refers to the data the new node should contain
-    # contains the algorithm for inserting a node in the linked list at the beginning. 
-    # Return - True/False if successful/failed
-    def add (self, val):
-    	pass
     
-    ## ** Delete:
-    #------------
-    # val - variable refers to the node(data) that should be deleted
-    # it is checked if a node containing that value is present. 
-    # contains algo for deleting the node. 
-    # Return - True/False if successful/failed
-    def delete(self, val):
+    ## ** isEmpty:
+    #---------------
+    # Returns True if the Linked List is empty
+    def isEmpty(self):
+        if self.head == None:
+            return True
+        else:
+            return False
+    
+    ## ** Status:
+    #-----------------
+    # Prints the current position of head, tail pointers. 
+    def status(self):
     	pass
     
     ## ** Traverse/Display/Print:
@@ -57,6 +54,25 @@ class LinkedList(object):
     		print node.data
     		node = node.next
     	print node.data
+     
+    
+    ## ** Add:
+    #--------
+    # To add a value to a Linked List
+    # val - variable refers to the data the new node should contain
+    # contains the algorithm for inserting a node in the linked list at the beginning. 
+    # Return - True/False if successful/failed
+    def add (self, val):
+    	pass
+        
+    ## ** Delete:
+    #------------
+    # val - variable refers to the node(data) that should be deleted
+    # it is checked if a node containing that value is present. 
+    # contains algo for deleting the node. 
+    # Return - True/False if successful/failed
+    def delete(self, val):
+    	pass
 
     ## ** Find/Search:
     #-----------------
@@ -72,21 +88,6 @@ class LinkedList(object):
     # returns 0 if no nodes are present. 
     def listLength(self):
     	pass
-    
-    ## ** Status:
-    #-----------------
-    # Prints the current position of head, tail pointers. 
-    def status(self):
-    	pass
-    
-    ## ** isEmpty:
-    #---------------
-    # Returns True if the Linked List is empty
-    def isEmpty(self):
-        if self.head == None:
-            return True
-        else:
-            return False
         
 # Create instance of LL
 L = LinkedList()
