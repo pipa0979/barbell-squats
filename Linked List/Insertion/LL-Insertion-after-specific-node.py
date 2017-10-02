@@ -91,14 +91,11 @@ class LinkedList(object):
                 temp.next = new_node
                 return True
         
-            
-        
+                    
 LL = LinkedList()
 
 LL.status()
 LL.traverse()
-
-
 
 for each in xrange(9):
     if LL.addBeg(each):
