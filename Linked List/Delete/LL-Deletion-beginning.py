@@ -46,7 +46,12 @@ class LinkedList(object):
             new_node.next = self.head
             self.head = new_node
             return True
-        
+   
+    '''
+    Key to remember:: Deleting a node is basically making it a "floater"
+    We want to cut-off all the pointers to/from that node so it can no longer be accessed and hence
+    garbage collected by python
+    '''
     def delBeg(self):
         if self.isEmpty():
             print "Cannot delete, list empty"
