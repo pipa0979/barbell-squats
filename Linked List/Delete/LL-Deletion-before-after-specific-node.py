@@ -77,6 +77,34 @@ class LinkedList(object):
                 temp = temp.next 
         return False
     
+    
+    
+    ## Delete a node after a node(val) else do nothing
+    ## 4 --> 5 --> 1 --> 6 --> 8
+    # Have to traverse till specific node (val)
+    # Case 1: if val is 1, 6 should be deleted
+    # Case 2: if val is 8, no next node exists so do nothing
+    def delNodeAfterVal(self, val):
+        if self.isEmpty():
+            print "LL is Empty! Cannot delete after"
+        else:
+            temp = self.head
+            while temp.next != None:
+                if temp.data == val:
+                    print "Print node found, lets delete after"
+                    nex = temp.next
+                    if nex != None:
+                        print "temp --> {}".format(temp.data)
+                        print "nex --> {}".format(nex.data)
+                        print "{} will be deleted".format(nex.data)
+                        temp.next = nex.next
+                        return True
+                    else:
+                        print "Last node in LL, nothing to delete"
+                        return False
+                temp = temp.next
+        return False
+    
 LL = LinkedList()
 
 LL.addBeg(8)
@@ -89,8 +117,9 @@ LL.addBeg(4)
 LL.traverse()
 
 '''
-Try each of the following delete cases one by one
-'''
+#Delete node BEFORE
+#Try each of the following delete cases one by one
+
 # prev --> 4
 # toDel --> 4
 # temp --> 4
@@ -105,5 +134,15 @@ LL.delNodeBeforeVal(5)
 # toDel --> 5
 # temp --> 1
 LL.delNodeBeforeVal(1)
+'''
 
+# Delete node After
+
+# temp --> 8
+# nex --> 8
+LL.delNodeAfterVal(8)
+
+# temp --> 6
+# nex --> 8
+#LL.delNodeAfterVal(6)
 LL.traverse()
