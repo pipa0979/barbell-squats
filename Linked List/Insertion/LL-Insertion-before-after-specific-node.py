@@ -137,6 +137,7 @@ LL.status()
 LL.traverse()
 
 if LL.addNodeBeforeVal(3, 333):
-    print " 333 added after 3"
+    print " 333 added before 3"
 else:
-    print " 333 not added after 3"
+    print " 333 not added before 3"
+LL.traverse()
