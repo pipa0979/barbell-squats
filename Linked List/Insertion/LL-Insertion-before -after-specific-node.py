@@ -76,8 +76,7 @@ class LinkedList(object):
 
     ## Adds a new node(val2) after a node of specific value(val1)
     # If node not found, add it at the beginning. 
-    
-    def addNodeVal(self, val1, val2):
+    def addNodeAfterVal(self, val1, val2):
         if self.isEmpty():
             self.addBeg(val2)
             return True
@@ -90,6 +89,29 @@ class LinkedList(object):
                 new_node.next = temp.next
                 temp.next = new_node
                 return True
+            
+    ## Add a node(val2) before a node of specific value(val1)
+    # If node not found, insert at the beginning.
+    # We maintain two pointers, temp & prev
+    # prev - is one step behind temp so once we find the value(temp), 
+    # we can insert the new node right after prev
+    def addNodeBeforeVal(self, val1, val2):
+        if self.isEmpty():
+            self.addBeg(val2)
+            return True
+        else:
+            new_node = Node(val2)
+            temp = self.head
+            prev = self.head
+            while temp.next != None:
+                if temp.data == val1:
+                    print "Node is found"
+                    new_node.next = prev.next
+                    prev.next = new_node
+                    return True
+                prev = temp
+                temp = temp.next
+            return False
         
                     
 LL = LinkedList()
@@ -106,10 +128,15 @@ for each in xrange(9):
 LL.status()
 LL.traverse()
 
-if LL.addNodeVal(3, 1000):
+if LL.addNodeAfterVal(3, 1000):
     print " 1000 added after 3"
 else:
     print " 1000 not added after 3"
 
 LL.status()
 LL.traverse()
+
+if LL.addNodeBeforeVal(3, 333):
+    print " 333 added after 3"
+else:
+    print " 333 not added after 3"

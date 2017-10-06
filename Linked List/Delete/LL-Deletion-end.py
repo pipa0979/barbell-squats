@@ -63,7 +63,7 @@ class LinkedList(object):
             to_del = self.head
             while to_del.next != None:
                 prev = to_del   # keeping track of the previous node.
-                to_del = to_del.next # ash why this order of statements
+                to_del = to_del.next # ask why this order of statements
              
             prev.next = None
             print "{} deleted!".format(to_del.data)
@@ -80,11 +80,4 @@ LL.traverse()
 
 LL.delEnd()
 
-            
-        
-            
-        
-            
-        
-            
-            
+          
