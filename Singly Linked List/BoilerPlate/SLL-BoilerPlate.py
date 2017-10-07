@@ -119,6 +119,7 @@ else:
                                     
 # Print LL 
 L.traverse()
-                                      
+                
+KUKREN CALLS MEEE
                                       
                                       
